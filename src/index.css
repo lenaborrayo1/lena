@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Miami Luxury Real Estate Design System
+   Navy Blue (#0f172a) + Gold/Champagne (#c9a962)
+   All colors MUST be HSL
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 43 47% 59%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 43 47% 59%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 43 47% 59%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens */
+    --navy: 222 47% 11%;
+    --navy-light: 222 30% 25%;
+    --gold: 43 47% 59%;
+    --gold-light: 43 40% 75%;
+    --gold-dark: 43 55% 45%;
+    --cream: 40 33% 97%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 43 47% 59%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 40% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 40% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 43 47% 59%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 222 30% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 222 30% 20%;
+    --muted-foreground: 220 14% 70%;
+
+    --accent: 43 47% 59%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 222 30% 20%;
+    --input: 222 30% 20%;
+    --ring: 43 47% 59%;
+
+    --sidebar-background: 222 40% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 43 47% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 30% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 222 30% 20%;
+    --sidebar-ring: 43 47% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-navy font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-navy font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-gold-dark hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-navy text-navy font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-navy hover:text-white;
+  }
+
+  .card-luxury {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .text-gold {
+    @apply text-[hsl(var(--gold))];
+  }
+
+  .text-navy {
+    @apply text-[hsl(var(--navy))];
+  }
+
+  .bg-gold {
+    @apply bg-[hsl(var(--gold))];
+  }
+
+  .bg-navy {
+    @apply bg-[hsl(var(--navy))];
+  }
+
+  .bg-cream {
+    @apply bg-[hsl(var(--cream))];
+  }
+
+  .border-gold {
+    @apply border-[hsl(var(--gold))];
+  }
+
+  .border-navy {
+    @apply border-[hsl(var(--navy))];
+  }
+
+  .hover\:bg-gold-dark:hover {
+    @apply bg-[hsl(var(--gold-dark))];
+  }
+
+  .ring-gold {
+    @apply ring-[hsl(var(--gold))];
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[hsl(43,55%,45%)] to-[hsl(43,47%,59%)] bg-clip-text text-transparent;
+  }
+}
