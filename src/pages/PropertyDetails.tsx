@@ -218,10 +218,10 @@ const PropertyDetails = () => {
               <div className="space-y-4 mb-6">
                 <a
                   href="tel:+17863440357"
-                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gold hover:bg-gold-dark text-navy font-semibold rounded-lg transition-colors"
+                  className="flex items-center justify-center gap-2 w-full py-3 px-4 bg-gold hover:bg-gold-dark text-navy font-semibold rounded-lg transition-colors font-body"
                 >
                   <Phone className="w-5 h-5" />
-                  1 786-344-0357
+                  1-786-344-0357
                 </a>
                 <a
                   href="mailto:lenaborrayo@gmail.com"
