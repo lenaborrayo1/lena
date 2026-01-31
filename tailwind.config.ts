@@ -14,7 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+        heading: ["Libre Baskerville", "Georgia", "serif"],
+        body: ["Montserrat", "system-ui", "sans-serif"],
+        script: ["Tangerine", "cursive"],
+        sans: ["Montserrat", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
