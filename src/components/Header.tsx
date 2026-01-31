@@ -44,10 +44,10 @@ const Header = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-gold hover:bg-gold-dark text-navy font-semibold">
+            <Button asChild className="bg-gold hover:bg-gold-dark text-navy font-semibold font-body">
               <a href="tel:+17863440357">
                 <Phone className="w-4 h-4 mr-2" />
-                Call Now
+                1-786-344-0357
               </a>
             </Button>
           </nav>
@@ -82,10 +82,10 @@ const Header = () => {
                 <span>{link.name}</span>
               </Link>
             ))}
-            <Button asChild className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold">
+            <Button asChild className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold font-body">
               <a href="tel:+17863440357">
                 <Phone className="w-4 h-4 mr-2" />
-                Call Now
+                1-786-344-0357
               </a>
             </Button>
           </nav>
