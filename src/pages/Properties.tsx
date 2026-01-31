@@ -47,11 +47,11 @@ const Properties = () => {
       {/* Hero Banner */}
       <section className="bg-navy py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
             Find Your <span className="text-gold">Dream Property</span>
           </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Explore our exclusive collection of luxury properties across Miami and South Florida.
+          <p className="text-gray-300 max-w-2xl mx-auto font-body">
+            Explore our exclusive collection of excellent properties across Miami and South Florida.
           </p>
         </div>
       </section>
