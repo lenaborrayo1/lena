@@ -135,9 +135,21 @@ export const ListingsProvider = ({ children }: { children: ReactNode }) => {
     return saved ? JSON.parse(saved) : initialListings;
   });
 
+  // Sync state to localStorage whenever listings change
   useEffect(() => {
     localStorage.setItem("listings", JSON.stringify(listings));
   }, [listings]);
+
+  // Listen for storage changes from other tabs/windows
+  useEffect(() => {
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === "listings" && e.newValue) {
+        setListings(JSON.parse(e.newValue));
+      }
+    };
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
 
   const addListing = (property: Omit<Property, "id" | "createdAt">) => {
     const newProperty: Property = {
