@@ -23,24 +23,27 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <div className="order-2 lg:order-1 text-center lg:text-left animate-fade-in">
-              <span className="inline-block px-4 py-2 bg-gold/20 text-gold-dark rounded-full text-sm font-semibold mb-4">
-                Miami Real Estate Expert
+              <span className="inline-block px-4 py-2 bg-gold/20 text-gold-dark rounded-full text-sm font-semibold mb-4 font-body">
+                Florida Real Estate Industry
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy leading-tight mb-4">
                 Your Trusted Miami{" "}
                 <span className="text-gold">Real Estate Expert</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-                Helping you Buy, Sell, and Rent with confidence. Experience the Miami luxury lifestyle with personalized service.
+              <p className="font-script text-3xl md:text-4xl text-gold mb-6">
+                Navigating Life & Real Estate with Lena
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 font-body">
+                Your expert in <strong>Miami real estate</strong> and the <strong>Florida Real Estate Industry</strong>. Helping you Buy, Sell, and Rent with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8">
+                <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8 font-body">
                   <Link to="/properties">
                     View Listings
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold text-lg px-8">
+                <Button asChild variant="outline" size="lg" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold text-lg px-8 font-body">
                   <a href="#contact">Contact Me</a>
                 </Button>
               </div>
@@ -90,14 +93,14 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-gold/20 text-gold-dark rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-gold/20 text-gold-dark rounded-full text-sm font-semibold mb-4 font-body">
               Featured Properties
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
-              Exclusive Miami Listings
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-4">
+              Excellent Properties in Miami
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Discover handpicked luxury properties in South Florida's most desirable locations.
+            <p className="text-muted-foreground max-w-2xl mx-auto font-body">
+              Discover handpicked excellent properties in South Florida's most desirable locations.
             </p>
           </div>
 
@@ -130,26 +133,26 @@ const Index = () => {
               />
             </div>
             <div>
-              <span className="inline-block px-4 py-2 bg-gold/20 text-gold-dark rounded-full text-sm font-semibold mb-4">
+              <span className="inline-block px-4 py-2 bg-gold/20 text-gold-dark rounded-full text-sm font-semibold mb-4 font-body">
                 About Me
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-6">
                 Your Partner in Finding the Perfect Home
               </h2>
-              <p className="text-muted-foreground mb-6">
-                With over 15 years of experience in Miami real estate, I specialize in luxury properties across South Florida. My commitment is to provide personalized service that exceeds your expectations.
+              <p className="text-muted-foreground mb-6 font-body">
+                With over 15 years of experience in Miami real estate, I specialize in excellent properties across South Florida. My commitment is to provide personalized service that exceeds your expectations.
               </p>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-muted-foreground mb-8 font-body">
                 Whether you're buying your dream home, selling a property, or looking for the perfect rental, I'm here to guide you every step of the way with expertise and dedication.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="bg-gold hover:bg-gold-dark text-navy font-semibold">
+                <Button asChild className="bg-gold hover:bg-gold-dark text-navy font-semibold font-body">
                   <a href="tel:+17863440357">
                     <Phone className="w-4 h-4 mr-2" />
-                    Call Now
+                    1-786-344-0357
                   </a>
                 </Button>
-                <Button asChild variant="outline" className="border-2 border-navy text-navy hover:bg-navy hover:text-white">
+                <Button asChild variant="outline" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-body">
                   <a href="mailto:lenaborrayo@gmail.com">
                     <Mail className="w-4 h-4 mr-2" />
                     Email Me
@@ -165,13 +168,13 @@ const Index = () => {
       <section id="contact" className="py-16 md:py-24 bg-navy text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-semibold mb-4 font-body">
               Get In Touch
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-white">
               Ready to Find Your Dream Home?
             </h2>
-            <p className="text-gray-300 mb-10">
+            <p className="text-gray-300 mb-10 font-body">
               Contact me today for a personalized consultation. I'm here to help you navigate the Miami real estate market.
             </p>
 
@@ -181,25 +184,25 @@ const Index = () => {
                 className="flex flex-col items-center p-6 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
               >
                 <Phone className="w-8 h-8 text-gold mb-3" />
-                <span className="font-semibold mb-1">Phone</span>
-                <span className="text-gray-300 text-sm">1 786-344-0357</span>
+                <span className="font-semibold mb-1 font-body">Phone</span>
+                <span className="text-gray-300 text-sm font-body">1-786-344-0357</span>
               </a>
               <a
                 href="mailto:lenaborrayo@gmail.com"
                 className="flex flex-col items-center p-6 bg-white/10 rounded-xl hover:bg-white/20 transition-colors"
               >
                 <Mail className="w-8 h-8 text-gold mb-3" />
-                <span className="font-semibold mb-1">Email</span>
-                <span className="text-gray-300 text-sm">lenaborrayo@gmail.com</span>
+                <span className="font-semibold mb-1 font-body">Email</span>
+                <span className="text-gray-300 text-sm font-body">lenaborrayo@gmail.com</span>
               </a>
               <div className="flex flex-col items-center p-6 bg-white/10 rounded-xl">
                 <MapPin className="w-8 h-8 text-gold mb-3" />
-                <span className="font-semibold mb-1">Location</span>
-                <span className="text-gray-300 text-sm">Miami, Florida</span>
+                <span className="font-semibold mb-1 font-body">Location</span>
+                <span className="text-gray-300 text-sm font-body">Miami, Florida</span>
               </div>
             </div>
 
-            <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-10">
+            <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-10 font-body">
               <a href="https://wa.me/17863440357" target="_blank" rel="noopener noreferrer">
                 Message on WhatsApp
               </a>
