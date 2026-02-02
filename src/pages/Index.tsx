@@ -3,11 +3,19 @@ import { ArrowRight, Phone, Mail, MapPin, Award, Users, Home as HomeIcon } from 
 import { Button } from "@/components/ui/button";
 import { useListings } from "@/contexts/ListingsContext";
 import PropertyCard from "@/components/PropertyCard";
+import ContactForm from "@/components/ContactForm";
 import lenaImage from "@/assets/lena-borrayo.png";
 
 const Index = () => {
   const { listings } = useListings();
   const featuredListings = listings.filter((l) => l.featured).slice(0, 3);
+
+  const scrollToContactForm = () => {
+    const element = document.getElementById("contact-form");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const stats = [
     { icon: HomeIcon, value: "150+", label: "Properties Sold" },
@@ -27,11 +35,11 @@ const Index = () => {
                 Florida Real Estate Industry
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-navy leading-tight mb-4">
-                Your Trusted Miami{" "}
+                Your Trusted FLORIDA{" "}
                 <span className="text-gold">Real Estate Expert</span>
               </h1>
               <p className="font-script text-3xl md:text-4xl text-gold mb-6">
-                Navigating Life & Real Estate with Lena
+                Realteando por la Vida con Lena
               </p>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 font-body">
                 Your expert in <strong>Miami real estate</strong> and the <strong>Florida Real Estate Industry</strong>. Helping you Buy, Sell, and Rent with confidence.
@@ -43,8 +51,12 @@ const Index = () => {
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-semibold text-lg px-8 font-body">
-                  <a href="#contact">Contact Me</a>
+                <Button 
+                  size="lg" 
+                  className="bg-navy hover:bg-navy-light text-white font-semibold text-lg px-8 font-body"
+                  onClick={scrollToContactForm}
+                >
+                  Contact Lena
                 </Button>
               </div>
             </div>
@@ -104,11 +116,15 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {featuredListings.map((property) => (
-              <PropertyCard key={property.id} property={property} />
-            ))}
-          </div>
+          {featuredListings.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {featuredListings.map((property) => (
+                <PropertyCard key={property.id} property={property} />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-muted-foreground font-body">No active listings at the moment.</p>
+          )}
 
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-navy hover:bg-navy-light text-white font-semibold">
@@ -145,24 +161,19 @@ const Index = () => {
               <p className="text-muted-foreground mb-8 font-body">
                 Whether you're buying your dream home, selling a property, or looking for the perfect rental, I'm here to guide you every step of the way with expertise and dedication.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="bg-gold hover:bg-gold-dark text-navy font-semibold font-body">
-                  <a href="tel:+17863440357">
-                    <Phone className="w-4 h-4 mr-2" />
-                    1-786-344-0357
-                  </a>
-                </Button>
-                <Button asChild variant="outline" className="border-2 border-navy text-navy hover:bg-navy hover:text-white font-body">
-                  <a href="mailto:lenaborrayo@gmail.com">
-                    <Mail className="w-4 h-4 mr-2" />
-                    Email Me
-                  </a>
-                </Button>
-              </div>
+              <Button asChild className="bg-gold hover:bg-gold-dark text-navy font-semibold font-body">
+                <a href="tel:+17863440357">
+                  <Phone className="w-4 h-4 mr-2" />
+                  1-786-344-0357
+                </a>
+              </Button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Contact Form Section */}
+      <ContactForm />
 
       {/* Contact Section */}
       <section id="contact" className="py-16 md:py-24 bg-navy text-white">
