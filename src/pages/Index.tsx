@@ -10,13 +10,6 @@ const Index = () => {
   const { listings } = useListings();
   const featuredListings = listings.filter((l) => l.featured).slice(0, 3);
 
-  const scrollToContactForm = () => {
-    const element = document.getElementById("contact-form");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const stats = [
     { icon: HomeIcon, value: "150+", label: "Properties Sold" },
     { icon: Users, value: "200+", label: "Happy Clients" },
@@ -29,8 +22,8 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center pt-16 md:pt-20 bg-cream overflow-hidden">
         <div className="container mx-auto px-4 py-12 md:py-20">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Text Content */}
-            <div className="order-2 lg:order-1 text-center lg:text-left animate-fade-in">
+            {/* Text Content - Added relative and z-10 to bring buttons to front */}
+            <div className="order-2 lg:order-1 text-center lg:text-left animate-fade-in relative z-10">
               <span className="inline-block px-4 py-2 bg-gold/20 text-gold-dark rounded-full text-sm font-semibold mb-4 font-body">
                 Florida Real Estate Industry
               </span>
@@ -45,24 +38,26 @@ const Index = () => {
                 Your expert in <strong>Miami real estate</strong> and the <strong>Florida Real Estate Industry</strong>. Helping you Buy, Sell, and Rent with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8 font-body">
+                <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8 font-body cursor-pointer relative z-20">
                   <Link to="/properties">
                     View Listings
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
                 <Button 
+                  asChild
                   size="lg" 
-                  className="bg-navy hover:bg-navy-light text-white font-semibold text-lg px-8 font-body"
-                  onClick={scrollToContactForm}
+                  className="bg-navy hover:bg-navy-light text-white font-semibold text-lg px-8 font-body cursor-pointer relative z-20"
                 >
-                  Contact Lena
+                  <a href="#contact-form">
+                    Contact Lena
+                  </a>
                 </Button>
               </div>
             </div>
 
             {/* Hero Image */}
-            <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative z-10">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-gold/30 to-gold/10 rounded-full blur-3xl"></div>
                 <img
@@ -75,8 +70,8 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Decorative wave */}
-        <div className="absolute bottom-0 left-0 right-0">
+        {/* Decorative wave - Added pointer-events-none so clicks pass through it */}
+        <div className="absolute bottom-0 left-0 right-0 pointer-events-none z-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
