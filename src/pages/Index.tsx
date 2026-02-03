@@ -35,7 +35,7 @@ const Index = () => {
                 Realteando por la Vida con Lena
               </p>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 font-body">
-                Your expert in <strong>Miami real estate</strong> and the <strong>Florida Real Estate Industry</strong>. Helping you Buy, Sell, and Rent with confidence.
+                Your expert in <strong>Florida real estate</strong> and the <strong>Florida Real Estate Industry</strong>. Helping you Buy, Sell, and Rent with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8 font-body cursor-pointer relative z-20">
@@ -62,7 +62,7 @@ const Index = () => {
                 <div className="absolute -inset-4 bg-gradient-to-br from-gold/30 to-gold/10 rounded-full blur-3xl"></div>
                 <img
                   src={lenaImage}
-                  alt="Lena Borrayo - Miami Real Estate Agent"
+                  alt="Lena Borrayo - Florida Real Estate Agent"
                   className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] object-cover rounded-full border-4 border-gold shadow-2xl"
                 />
               </div>
@@ -151,7 +151,7 @@ const Index = () => {
                 Your Partner in Finding the Perfect Home
               </h2>
               <p className="text-muted-foreground mb-6 font-body">
-                With over 15 years of experience in Miami real estate, I specialize in excellent properties across South Florida. My commitment is to provide personalized service that exceeds your expectations.
+                With over 15 years of experience in Florida real estate, I specialize in excellent properties across South Florida. My commitment is to provide personalized service that exceeds your expectations.
               </p>
               <p className="text-muted-foreground mb-8 font-body">
                 Whether you're buying your dream home, selling a property, or looking for the perfect rental, I'm here to guide you every step of the way with expertise and dedication.
@@ -181,7 +181,7 @@ const Index = () => {
               Ready to Find Your Dream Home?
             </h2>
             <p className="text-gray-300 mb-10 font-body">
-              Contact me today for a personalized consultation. I'm here to help you navigate the Miami real estate market.
+              Contact me today for a personalized consultation. I'm here to help you navigate the Florida real estate market.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6 mb-10">
