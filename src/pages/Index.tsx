@@ -35,7 +35,7 @@ const Index = () => {
                 Realteando por la Vida con Lena
               </p>
               <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0 font-body">
-                Your expert in <strong>Florida real estate</strong> and the <strong>Florida Real Estate Industry</strong>. Helping you Buy, Sell, and Rent with confidence.
+                Your expert in <strong>Florida Real Estate Industry</strong>. Helping you Buy, Sell, and Rent with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button asChild size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8 font-body cursor-pointer relative z-20">
