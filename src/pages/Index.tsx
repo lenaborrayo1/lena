@@ -104,7 +104,7 @@ const Index = () => {
               Featured Properties
             </span>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-navy mb-4">
-              Excellent Properties in Miami
+              Excellent Properties in Florida
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto font-body">
               Discover handpicked excellent properties in South Florida's most desirable locations.
