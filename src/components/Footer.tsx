@@ -12,7 +12,7 @@ const Footer = () => {
               Lena <span className="text-gold">Borrayo</span>
             </h3>
             <p className="text-gray-300 mb-4">
-              Your trusted Miami real estate expert. Helping you find your dream home in South Florida.
+              Your trusted Florida real estate expert. Helping you find your dream home in South Florida.
             </p>
             <div className="flex space-x-4">
               <a
