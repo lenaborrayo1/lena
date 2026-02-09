@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Tangerine:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lena Borrayo Brand Identity Design System
+   Brand Colors: Gold (#D4AF37), Black (#010101), White (#ffffff)
+   Typography: Libre Baskerville (Headings), Montserrat (Body), Tangerine (Script/Accent)
+   All colors MUST be HSL
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 45 75% 52%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 45 75% 52%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 45 75% 52%;
+
+    --radius: 0.5rem;
+
+    /* Brand tokens */
+    --navy: 0 0% 0%;
+    --navy-light: 0 0% 15%;
+    --gold: 45 75% 52%;
+    --gold-light: 45 60% 70%;
+    --gold-dark: 45 80% 42%;
+    --cream: 45 33% 97%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 20%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 90%;
+    --sidebar-ring: 45 75% 52%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 45 75% 52%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 45 75% 52%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 45 75% 52%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 45 75% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 45 75% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-navy font-heading font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-navy font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-gold-dark hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply border-2 border-navy text-navy font-semibold px-6 py-3 rounded-md transition-all duration-300 hover:bg-navy hover:text-white;
+  }
+
+  .card-luxury {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .font-script {
+    font-family: 'Tangerine', cursive;
+  }
+
+  .text-gold {
+    @apply text-[hsl(var(--gold))];
+  }
+
+  .text-navy {
+    @apply text-[hsl(var(--navy))];
+  }
+
+  .bg-gold {
+    @apply bg-[hsl(var(--gold))];
+  }
+
+  .bg-navy {
+    @apply bg-[hsl(var(--navy))];
+  }
+
+  .bg-cream {
+    @apply bg-[hsl(var(--cream))];
+  }
+
+  .border-gold {
+    @apply border-[hsl(var(--gold))];
+  }
+
+  .border-navy {
+    @apply border-[hsl(var(--navy))];
+  }
+
+  .hover\:bg-gold-dark:hover {
+    @apply bg-[hsl(var(--gold-dark))];
+  }
+
+  .ring-gold {
+    @apply ring-[hsl(var(--gold))];
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-[hsl(43,55%,45%)] to-[hsl(43,47%,59%)] bg-clip-text text-transparent;
+  }
+}
